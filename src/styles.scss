@@ -1,1 +1,177 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+@import "margins";
+
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #AE7AFF;
+  --gray-color: #5F646D;
+  --dark-hover-color: #161616;
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
+}
+body {
+  background: var(--dark-color);
+  color: var(--light-color);
+  font-family: 'JetBrains Mono', monospace;
+  background-image: url(/assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+}
+
+.skill-tag {
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  border: 1px solid var(--light-color);
+  display: inline;
+  font-weight: 700;
+  height: 24px;
+}
+
+.btn {
+  width: 100%;
+  background: var(--primary-color);
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-shadow {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 100%;
+    height: 100%;
+    background: var(--gray-color);
+    border-radius: 4px;
+
+    z-index: -1;
+  }
+}
+
+
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.h4 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+
+.subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.medium-text {
+  font-family: 'JetBrains Mono',sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.regular {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 800;
+
+}
+
+.tt-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  width: 100%;
+}
+
+.tt-input {
+  width: 100%;
+  margin-top: 8px;
+  display: block;
+  background: var(--dark-color);
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--light-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tt-form-label {
+  display: flex;
+  flex-direction:column;
+  gap: 16px;
+
+}
+
+
+.tt-form-label__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--light-transparent-color);
+}
+
+.tt-form-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  border-bottom: 1px solid var(--light-color);
+  height: 33px;
+  color: var(--light-color);
+  background: none;
+  outline: none;
+  &:focus-visible {
+    outline: 1px solid var(--primary-color);
+  }
+}
+
+.tt-textarea {
+  height: 84px;
+  resize: none;
+
+}
+
+.profile-wrapper {
+
+}
